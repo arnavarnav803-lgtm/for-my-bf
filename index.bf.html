@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For You 💛</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    }
+
+    .card {
+      background: #ffffff;
+      width: 320px;
+      padding: 24px;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      text-align: center;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    h1 {
+      color: #ff6f61;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #444;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    .heart {
+      font-size: 40px;
+      animation: beat 1.2s infinite;
+      margin: 12px 0;
+    }
+
+    @keyframes beat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+
+    .quote {
+      margin-top: 15px;
+      padding: 12px;
+      background: #fff3f0;
+      border-radius: 12px;
+      font-style: italic;
+      color: #555;
+    }
+
+    .from {
+      margin-top: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    button {
+      margin-top: 16px;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 20px;
+      background: #ff6f61;
+      color: white;
+      cursor: pointer;
+      font-size: 14px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Hey Diya 🌼</h1>
+    <div class="heart">💛</div>
+    <p>
+      I know things feel really heavy right now, but please remember:
+      <br />you are strong, kind, and worth so much love.
+    </p>
+
+    <div class="quote">
+      "Some chapters end so better ones can begin."
+    </div>
+
+    <p>
+      This moment does not define you. Healing takes time,
+      and it’s okay to go slow.
+    </p>
+
+    <button onclick="toggleLetter()">Open Letter 💌</button>
+
+    <div id="letter" style="display:none; margin-top:16px; padding:14px; background:#fff7f4; border-radius:14px; color:#444; line-height:1.6;">
+      <p><strong>Dear Diya,</strong></p>
+      <p>
+        I know this is a tough time, but I want you to remember how amazing you are.
+        Your smile, your kindness, and your strength mean more than you realize.
+        Bad days don’t last forever — and you don’t have to face them alone.
+      </p>
+      <p>
+        Take all the time you need to heal. I’ll always be right here,
+        cheering you on and believing in you.
+      </p>
+      <p>With lots of care 💛</p>
+    </div>
+
+    <div class="from">— Your lovingly Arnav 💫</div>
+  </div>
+
+  <script>
+        function toggleLetter() {
+      const letter = document.getElementById('letter');
+      letter.style.display = letter.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
+</body>
+</html>
